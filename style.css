@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Menu Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 80px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo h2 {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #fca311;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
+
+/* Banner Hero com imagem limpa de praia ao por do sol */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    max-width: 900px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-weight: 300;
+    margin-bottom: 35px;
+    opacity: 0.9;
+}
+
+.btn-reserva {
+    background-color: #fca311;
+    color: #ffffff;
+    padding: 16px 36px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 4px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-reserva:hover {
+    background-color: #e59200;
+    transform: translateY(-2px);
+}
+
+/* Cards Sobrepostos */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1140px;
+    margin: -90px auto 80px auto;
+    position: relative;
+    z-index: 10;
+    padding: 0 20px;
+}
+
+.card {
+    flex: 1;
+    padding: 45px 30px;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card .icon {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 15px;
+    margin-bottom: 15px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.card-laranja {
+    background-color: #fca311;
+    color: white;
+}
+
+.card-branco {
+    background-color: #ffffff;
+    color: #444;
+}
+
+.card-branco h3 {
+    color: #0077b6;
+}
+
+.card-azul {
+    background-color: #0077b6;
+    color: white;
+}
+
+/* Seção Sobre */
+.secao-sobre {
+    max-width: 1140px;
+    margin: 0 auto 100px auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.sobre-texto {
+    flex: 1;
+}
+
+.sobre-texto h2 {
+    font-size: 36px;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.sobre-texto p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+}
+
+.sobre-imagem {
+    flex: 1;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE PARA CELULAR (MEDIA QUERIES)
+   ========================================== */
+
+@media (max-width: 768px) {
+    /* Ajustes na Barra de Navegação */
+    .navbar {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+        position: relative;
+        background-color: #111;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        display: block;
+        padding: 5px 0;
+    }
+
+    /* Ajuste no Banner de Destaque */
+    .hero {
+        height: auto;
+        padding: 60px 20px 120px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .btn-reserva {
+        width: 100%;
+        padding: 14px 20px;
+    }
+
+    /* Empilha os 3 Cards em Telas Pequenas */
+    .cards-container {
+        flex-direction: column;
+        margin-top: -60px;
+        gap: 15px;
+    }
+
+    .card {
+        padding: 30px 20px;
+    }
+
+    /* Empilha a Seção "Sobre" */
+    .secao-sobre {
+        flex-direction: column;
+        margin-bottom: 50px;
+        gap: 30px;
+    }
+
+    .sobre-texto h2 {
+        font-size: 26px;
+    }
+}
